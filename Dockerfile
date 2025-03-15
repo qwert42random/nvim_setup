@@ -2,8 +2,11 @@ FROM debian:latest
 
 RUN apt-get update
 RUN apt-get upgrade -y
-RUN useradd -rm -d /home/debian -s /bin/bash -g root -G root -u 1001 debian
+RUN apt-get install sudo -y
 
+# Add debian user and set sudo.
+RUN useradd -rm -d /home/debian -s /bin/bash -g root -G sudo debian
+RUN echo "debian ALL=(ALL) NOPASSWD:ALL" >> /etc/sudoers.d/debian
 USER debian
 
 WORKDIR /home/debian
