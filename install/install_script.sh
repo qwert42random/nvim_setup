@@ -1,12 +1,12 @@
 #!/bin/bash
 
 NVIM_REPO=/tmp/neovim
-HOME_DIR=(eval echo ~${SUDO_USER})
+HOME_DIR=$(eval echo ~${SUDO_USER})
 
 set -e
 
 # Install dependencies.
-DEPENDENCIES="git make cmake gettext"
+DEPENDENCIES="git cmake gettext"
 apt-get install -y ${DEPENDENCIES}
 
 git clone https://github.com/neovim/neovim.git --depth 1 --branch "stable" ${NVIM_REPO}
