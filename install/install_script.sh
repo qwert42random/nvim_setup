@@ -15,4 +15,5 @@ make -C ${NVIM_REPO} CMAKE_BUILD_TYPE=RelWithDebInfo CMAKE_INSTALL_PREFIX=/usr
 make -C ${NVIM_REPO} install
 
 mkdir -p $HOME_DIR/.config/nvim
+mkdir -p $HOME_DIR/.local/share/nvim/site/pack/plugins/start
 
