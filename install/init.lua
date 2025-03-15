@@ -1,3 +1,6 @@
+require('lualine').setup()
+require('nvim-tree').setup()
+
 vim.opt.number = true
 vim.opt.shiftwidth = 4
 vim.opt.tabstop = 4
