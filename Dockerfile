@@ -2,6 +2,7 @@ FROM debian:latest
 
 RUN apt-get update
 RUN apt-get upgrade -y
+RUN apt-get install man -y
 RUN apt-get install sudo -y
 
 # Add debian user and set sudo.
