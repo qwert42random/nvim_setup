@@ -24,6 +24,7 @@ mkdir -p $CONFIG_LOC
 mkdir -p $PLUGIN_LOC/start
 
 cp $SCRIPT_DIR/init.lua $CONFIG_LOC
+cp -r $SCRIPT_DIR/lua $CONFIG_LOC
 
 PLUGINS=(
 "https://github.com/nvim-lualine/lualine.nvim.git --branch 'compat-nvim-0.6'" \
