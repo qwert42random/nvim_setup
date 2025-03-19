@@ -30,9 +30,9 @@ vim.api.nvim_create_autocmd("BufEnter", {
     nested = true,
     callback = function()
         if (vim.fn.bufname() == "NvimTree_1") then
-            vim.cmd("highlight CursorLine guibg=DarkGrey ctermbg=DarkGrey")
+            vim.cmd("highlight CursorLine guibg=DarkGrey ctermbg=DarkGrey gui=NONE cterm=NONE")
         else
-            vim.cmd("highlight CursorLine guibg=NONE ctermbg=NONE")
+            vim.cmd("highlight CursorLine guibg=NONE ctermbg=NONE gui=underline cterm=underline")
         end
     end,
 })
